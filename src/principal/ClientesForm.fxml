@@ -9,34 +9,34 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principal.ClientesController">
    <children>
       <Text layoutX="284.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CADASTRO DE CLIENTES">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Text>
-      <TextField layoutX="284.0" layoutY="99.0" prefHeight="26.0" prefWidth="214.0" />
-      <TextField layoutX="284.0" layoutY="132.0" prefHeight="26.0" prefWidth="214.0" />
-      <TextField layoutX="284.0" layoutY="164.0" prefHeight="26.0" prefWidth="214.0" />
-      <TextField layoutX="284.0" layoutY="196.0" prefHeight="26.0" prefWidth="214.0" />
-      <TextField layoutX="284.0" layoutY="229.0" prefHeight="26.0" prefWidth="214.0" />
+      <TextField fx:id="tfNome" layoutX="284.0" layoutY="99.0" prefHeight="26.0" prefWidth="214.0" />
+      <TextField fx:id="tfCnpj" layoutX="284.0" layoutY="132.0" prefHeight="26.0" prefWidth="214.0" />
+      <TextField fx:id="tfEmail" layoutX="284.0" layoutY="164.0" prefHeight="26.0" prefWidth="214.0" />
+      <TextField fx:id="tfEndereco" layoutX="284.0" layoutY="196.0" prefHeight="26.0" prefWidth="214.0" />
+      <TextField fx:id="tfTelefone" layoutX="284.0" layoutY="229.0" prefHeight="26.0" prefWidth="214.0" />
       <Label layoutX="167.0" layoutY="103.0" text="Nome/Razão Social:" />
       <Label layoutX="217.0" layoutY="136.0" text="CPF/CNPJ:" />
       <Label layoutX="236.0" layoutY="168.0" text="E-mail:" />
       <Label layoutX="219.0" layoutY="200.0" text="Endereço:" />
       <Label layoutX="221.0" layoutY="233.0" text="Telefone:" />
-      <Button layoutX="284.0" layoutY="268.0" mnemonicParsing="false" text="Cadastrar" />
-      <Button layoutX="358.0" layoutY="268.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="66.0" text="Alterar" />
-      <Button layoutX="431.0" layoutY="268.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="66.0" text="Cancelar" />
-      <TableView layoutX="25.0" layoutY="334.0" prefHeight="200.0" prefWidth="750.0">
+      <Button fx:id="btnCad" layoutX="284.0" layoutY="268.0" mnemonicParsing="false" onAction="#btnCad" text="Cadastrar" />
+      <Button fx:id="btnExc" layoutX="358.0" layoutY="268.0" mnemonicParsing="false" onAction="#btnExc" prefHeight="26.0" prefWidth="66.0" text="Excluir" />
+      <Button fx:id="btnCanc" layoutX="431.0" layoutY="268.0" mnemonicParsing="false" onAction="#btnCanc" prefHeight="26.0" prefWidth="66.0" text="Cancelar" />
+      <TableView fx:id="tblClientes" layoutX="25.0" layoutY="334.0" onMouseClicked="#selecionaClientes" prefHeight="200.0" prefWidth="750.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="ID" />
-          <TableColumn prefWidth="116.800048828125" text="Nome/Razão Social" />
-            <TableColumn prefWidth="122.4000244140625" text="CPJ/CNPJ" />
-            <TableColumn prefWidth="105.5999755859375" text="E-mail" />
-            <TableColumn prefWidth="172.7999267578125" text="Endereço" />
-            <TableColumn prefWidth="155.19998779296873" text="Telefone" />
+          <TableColumn fx:id="tbcID" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="tbcNome" prefWidth="116.800048828125" text="Nome/Razão Social" />
+            <TableColumn fx:id="tbcCnpj" prefWidth="122.4000244140625" text="CPF/CNPJ" />
+            <TableColumn fx:id="tbcEmail" prefWidth="105.5999755859375" text="E-mail" />
+            <TableColumn fx:id="tbcEndereco" prefWidth="172.7999267578125" text="Endereço" />
+            <TableColumn fx:id="tbcTelefone" prefWidth="155.19998779296873" text="Telefone" />
         </columns>
       </TableView>
    </children>
