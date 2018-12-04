@@ -15,7 +15,7 @@ public class UsuariosJDBC implements UsuariosDAO {
 	@Override
 	public void inserir(Usuarios dado) {
 		try {
-			String sql = "insert into usuarios (nome, usuario, senha) values (?,?,?,?)";
+			String sql = "insert into usuarios (nome, usuario, senha) values (?,?,?)";
 			PreparedStatement statement = ConexaoUtil.getConn().prepareStatement(sql);
 			statement.setString(1, dado.getNome());
 			statement.setString(3, dado.getSenha());
@@ -56,7 +56,7 @@ public class UsuariosJDBC implements UsuariosDAO {
 	@Override
 	public void excluir(Usuarios dado) {
 		try {
-			String sql = "delete from usuarios where codigo = ?";
+			String sql = "delete from usuarios where id = ?";
 			PreparedStatement statement = ConexaoUtil.getConn().prepareStatement(sql);
 			statement.setInt(1, dado.getId());
 			statement.executeUpdate();
