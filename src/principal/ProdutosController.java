@@ -20,7 +20,7 @@ public class ProdutosController {
     private TextField tfFabricante;
 
     @FXML
-    private ComboBox<?> cbxCategoria;
+    private ComboBox<Categoria> cbxCategoria;
 
     @FXML
     private TextField tfValUni;

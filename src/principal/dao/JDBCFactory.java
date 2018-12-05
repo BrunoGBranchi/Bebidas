@@ -7,4 +7,14 @@ public class JDBCFactory implements DaoFactory{
 		return new UsuariosJDBC();
 	}
 
+	@Override
+	public CategoriaDAO categoriasDao() {
+		return new CategoriaJDBC();
+	}
+
+	@Override
+	public ClientesDAO clientesDao() {
+		return new ClientesJDBC();
+	}
+
 }
