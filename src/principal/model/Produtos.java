@@ -7,6 +7,7 @@ public class Produtos implements Serializable {
 	private static final long serialVersionUID = -4671171859296374197L;
 	private Integer id;
 	private String fabricante;
+	private String produto;
 	private Categoria categoria;
 	private Float valuni;
 	private Integer quantidade;
@@ -60,6 +61,12 @@ public class Produtos implements Serializable {
 	public Produtos() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+	public String getProduto() {
+		return produto;
+	}
+	public void setProduto(String produto) {
+		this.produto = produto;
 	}
 	
 	

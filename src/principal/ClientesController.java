@@ -2,6 +2,8 @@ package principal;
 
 import java.io.IOException;
 
+import org.junit.Test;
+
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -71,7 +73,7 @@ public class ClientesController {
     private ClientesDAO clientesDao = AbstractFactory.get().clientesDao();
     
     private Clientes cliente;
-    
+
     @FXML
 	public void initialize() {
 		tbcID.setCellValueFactory(new PropertyValueFactory<>("id"));
@@ -106,7 +108,6 @@ public class ClientesController {
             stage.setScene(scene);
             stage.setTitle("Programa");
             stage.show();
-            stage.setMaximized(true);
         }catch(IOException e){
             e.printStackTrace();
         }finally{

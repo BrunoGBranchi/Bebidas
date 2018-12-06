@@ -2,12 +2,15 @@ package principal;
 
 import java.io.IOException;
 
+import org.junit.platform.commons.annotation.Testable;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+
 
 public class PrincipalController {
 
@@ -25,7 +28,7 @@ public class PrincipalController {
 
     @FXML
     private MenuItem mmiUsuarios;
-
+    
     @FXML
     void mmiCategoria(ActionEvent event) {
     	FXMLLoader loader = new FXMLLoader();

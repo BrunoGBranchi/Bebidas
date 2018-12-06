@@ -86,7 +86,6 @@ public class CategoriaController {
             stage.setScene(scene);
             stage.setTitle("Programa");
             stage.show();
-            stage.setMaximized(true);
         }catch(IOException e){
             e.printStackTrace();
         }finally{

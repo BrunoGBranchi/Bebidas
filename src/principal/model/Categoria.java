@@ -9,6 +9,12 @@ public class Categoria implements Serializable {
 	private Integer id;
 	private String nome;
 	private String desc;
+	
+	@Override
+	public String toString() {
+		return ""+ id;
+	
+	}
 	public Integer getId() {
 		return id;
 	}
